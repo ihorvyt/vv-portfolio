@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AmbientBackground from '../components/AmbientBackground.astro';
+---
+
+<Layout title="Volodymyr Vorobiov - UX/UI Designer">
+    <AmbientBackground>
+        <main class="content">
+            <section class="about-me">
+                <h1>Volodymyr Vorobiov <br> <span>UX/UI Designer</span></h1>
+
+                <p>Я люблю ламати стереотипи, наприклад, цінники у вигляді чеків — маленька деталь, яка додає особливого шарму проєкту. Я часто створюю готовий продукт без варфреймів, довіряючи інтуїції та творчому процесу. Мене надихає аналіз дизайнів інших сайтів і плакатів; бачачи,
+                    наскільки вони можуть бути недосконалими,я прагну створювати по-справжньому красиві та зручні рішення.</p>
+
+                <div class="soc-medias">
+                    <a href="https://www.google.com">LinkedIn</a>
+                    <a href="https://www.google.com">Behance</a>
+                </div>
+            </section>
+
+            <section class="cases">
+                <h2>Cases</h2>
+
+                <ul>
+                    <li><a href="https://www.google.com">Frant</a></li>
+                    <li><a href="https://www.google.com">buskanini</a></li>
+                    <li><a href="https://www.google.com">DoseMate</a></li>
+                    <li><a href="https://www.google.com">Tedo Artline</a></li>
+                    <li><a href="https://www.google.com">FriendsRate</a></li>
+                </ul>
+            </section>
+        </main>
+    </AmbientBackground>
+</Layout>
+<style>
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1;
+        padding: 3.47vw;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .about-me {
+        h1 {
+            color: #FFF;
+            font-family: Unbounded, sans-serif;
+            font-size: 2.5vw;
+            font-weight: 600;
+
+            span {
+                font-size: 3.33vw;
+            }
+        }
+
+        p {
+            color: #FFF;
+            font-family: Geologica, sans-serif;
+            font-size: 1.11vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.74vw;
+            max-width: 58.13vw;
+            padding-top: 2.36vw;
+        }
+
+        .soc-medias {
+            display: flex;
+            gap: 0.69vw;
+            padding-top: 1.04vw;
+
+            a {
+                display: flex;
+                padding: 1.25vw 2.36vw;
+                justify-content: center;
+                align-items: center;
+                gap: 0.69vw;
+                border-radius: 2.92vw;
+                background: #D0FE1D;
+                color: #000;
+                font-family: Geologica, sans-serif;
+                font-size: 2.22vw;
+                font-weight: 600;
+                line-height: 78.125%;
+                letter-spacing: 0.02vw;
+            }
+        }
+    }
+
+    .cases {
+        h2 {
+            color: #FFF;
+            font-family: Unbounded, sans-serif;
+            font-size: 4.44vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            mix-blend-mode: difference;
+        }
+
+        ul {
+            padding-top: 4.38vw;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                a {
+                    color: #FFF;
+                    font-family: Geologica, sans-serif;
+                    font-size: 2.21vw;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 1.74vw;
+                    letter-spacing: 0.02vw;
+                }
+            }
+        }
+    }
+</style>

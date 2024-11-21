@@ -1,0 +1,25 @@
+---
+const scriptPath = "/AmbientLightBg.min.js";
+---
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volodymyr Vorobiov - UX/UI Designer</title>
+    <script type="module" src={scriptPath}></script>
+</head>
+<body>
+<div id="box" style="height: 100vh;" class="background-box">
+    <slot>Nothing here</slot>
+</div>
+
+<script is:inline>
+    new Color4Bg.AmbientLightBg({
+        dom: "box",
+        colors: ["#ff0f28", "#ff15c5", "#ff3aff", "#f5070e", "#fe1010", "#f756f7"],
+        loop: true
+    });
+</script>
+</body>
+</html>
