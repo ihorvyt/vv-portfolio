@@ -9,8 +9,9 @@ import AmbientBackground from '../components/AmbientBackground.astro';
             <section class="about-me">
                 <h1>Volodymyr Vorobiov <br> <span>UX/UI Designer</span></h1>
 
-                <p>Я люблю ламати стереотипи, наприклад, цінники у вигляді чеків — маленька деталь, яка додає особливого шарму проєкту. Я часто створюю готовий продукт без варфреймів, довіряючи інтуїції та творчому процесу. Мене надихає аналіз дизайнів інших сайтів і плакатів; бачачи,
-                    наскільки вони можуть бути недосконалими,я прагну створювати по-справжньому красиві та зручні рішення.</p>
+                <p>Your website is the first handshake with your audience, and I design it to leave a lasting impression. <br> With 2 years of experience as a  <br> Web Designer, I specialize in blending art and technology to craft unforgettable digital journeys. <br><br>
+                    On the creative side, I bring expertise in tools like Blender, Photoshop, Figma, and Illustrator to design custom graphics, intuitive UI/UX elements, and full website layouts. <br><br>
+                    My passion lies in creating visually stunning designs that enhance user experiences. I’m also skilled in prototyping, wireframing, and UI design, ensuring that every user’s journey is seamless across all platforms.</p>
 
                 <div class="soc-medias">
                     <a href="https://www.google.com">LinkedIn</a>
@@ -24,7 +25,7 @@ import AmbientBackground from '../components/AmbientBackground.astro';
                 <ul>
                     <li><a href="https://www.google.com">Frant</a></li>
                     <li><a href="https://www.google.com">buskanini</a></li>
-                    <li><a href="https://www.google.com">DoseMate</a></li>
+                    <li><a href="https://www.google.com">SkiWay</a></li>
                     <li><a href="https://www.google.com">Tedo Artline</a></li>
                     <li><a href="https://www.google.com">FriendsRate</a></li>
                 </ul>
@@ -65,6 +66,10 @@ import AmbientBackground from '../components/AmbientBackground.astro';
             line-height: 1.74vw;
             max-width: 58.13vw;
             padding-top: 2.36vw;
+
+            br:first-child, br:nth-child(2) {
+                display: none;
+            }
         }
 
         .soc-medias {
@@ -115,6 +120,65 @@ import AmbientBackground from '../components/AmbientBackground.astro';
                     font-weight: 600;
                     line-height: 1.74vw;
                     letter-spacing: 0.02vw;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 768px) {
+        .content {
+            padding: 16px 27px 13.557px 27px;
+        }
+
+        .about-me {
+            h1 {
+                font-size: 26px;
+
+                span {
+                    line-height: 1.35;
+                    font-size: 35px;
+                }
+            }
+
+            p {
+                font-size: 16.29px;
+                line-height: 25px;
+                max-width: unset;
+                padding-top: 32px;
+
+                br:first-child, br:nth-child(2) {
+                    display: block;
+                }
+            }
+
+            .soc-medias {
+                gap: 7.9px;
+                padding-top: 15px;
+
+                a {
+                    padding: 14.222px 30.863px;
+                    border-radius: 33.184px;
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .cases {
+            h2 {
+                font-size: 28px;
+            }
+
+            ul {
+                padding-top: 13px;
+                flex-wrap: wrap;
+                gap: 15px;
+
+                li {
+                    a {
+                        font-size: 22px;
+                        line-height: 25px;
+                        letter-spacing: 0.02vw;
+                    }
                 }
             }
         }
