@@ -25,7 +25,7 @@ import AmbientBackground from '../components/AmbientBackground.astro';
                 <ul>
                     <li><a href="https://www.figma.com/design/CxaVkQHYv0bywQZqpg0Lbu/frant?node-id=0-1&t=MRPwvwIJnZnKW15c-1">Frant</a></li>
                     <li><a href="https://www.figma.com/design/EfgFZTnoepS0tpQz2FcP0O/buskanini?node-id=0-1&t=20reYqtlvjwCZyNq-1">buskanini</a></li>
-                    <li><a href="https://www.figma.com/design/V6gRXippt1kvC8JNfADDFz/DoseMate?node-id=0-1&t=WX0uskX6hf07FKGF-1">SkiWay</a></li>
+                    <li><a href="https://www.figma.com/design/annOtk3I5nMx2sYFFDvecL/SkiWay?node-id=0-1&t=ibe6i9gLCbbCb737-1">SkiWay</a></li>
                     <li><a href="https://www.figma.com/design/8bUas6iucAjs7EIW2R7B5v/Tedo-Artline?node-id=0-1&t=VbmIZTIP5y1lnj1P-1">Tedo Artline</a></li>
                     <li><a href="https://www.figma.com/design/algv7e0yN1jT5ig3ygQotk/FriendsRate?node-id=0-1&t=6fSA6b0WEb3WU5ly-1">FriendsRate</a></li>
                 </ul>
@@ -126,8 +126,12 @@ import AmbientBackground from '../components/AmbientBackground.astro';
     }
 
     @media (max-width: 796px) {
+        body {
+            overflow: hidden;
+        }
+
         .content {
-            padding: 4.1vw 6.9vw 3.5vw 6.9vw;
+            padding: 27px 27px 26px 27px;
             overflow: scroll;
         }
 
@@ -155,6 +159,8 @@ import AmbientBackground from '../components/AmbientBackground.astro';
             .soc-medias {
                 gap: 2vw;
                 padding-top: 3.85vw;
+                display: flex;
+                flex-wrap: wrap;
 
                 a {
                     padding: 3.65vw 7.92vw;
