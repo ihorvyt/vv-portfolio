@@ -10,16 +10,8 @@ const scriptPath = "/AmbientLightBg.min.js";
     <script is:inline src={scriptPath}></script>
 </head>
 <body>
-<div id="box" style="height: 140dvh;" class="background-box">
-    <slot>Nothing here</slot>
-</div>
-
-<script is:inline>
-    new Color4Bg.AmbientLightBg({
-        dom: "box",
-        colors: ["#ff0f28", "#ff15c5", "#ff3aff", "#f5070e", "#fe1010", "#f756f7"],
-        loop: true
-    });
-</script>
+    <div id="bodx" class="background-box">
+        <slot>Nothing here</slot>
+    </div>
 </body>
 </html>

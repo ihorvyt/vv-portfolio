@@ -5,10 +5,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const scriptPath = "/AmbientLightBg.min.js";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" id="box">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -28,5 +29,13 @@ const { title } = Astro.props;
 		<slot>
 			Nothing here
 		</slot>
+
+		<script is:inline>
+			new Color4Bg.AmbientLightBg({
+				dom: "box",
+				colors: ["#ff0f28", "#ff15c5", "#ff3aff", "#f5070e", "#fe1010", "#f756f7"],
+				loop: true
+			});
+		</script>
 	</body>
 </html>
