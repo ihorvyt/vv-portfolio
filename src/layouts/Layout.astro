@@ -5,7 +5,6 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const scriptPath = "/AmbientLightBg.min.js";
 ---
 
 <!doctype html>
@@ -34,7 +33,11 @@ const scriptPath = "/AmbientLightBg.min.js";
 			new Color4Bg.AmbientLightBg({
 				dom: "box",
 				colors: ["#ff0f28", "#ff15c5", "#ff3aff", "#f5070e", "#fe1010", "#f756f7"],
-				loop: true
+				loop: true,
+				performance: {
+					maxFPS: 15, // Limit FPS to reduce load
+					quality: "low" // Lower quality on mobile
+				}
 			});
 		</script>
 	</body>
