@@ -3,8 +3,8 @@ import '../styles/default.css';
 interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
+import { AestheticFluidBg } from "jsm/AestheticFluidBg.module.js"
 ---
 
 <!doctype html>
@@ -30,15 +30,17 @@ const { title } = Astro.props;
 		</slot>
 
 		<script is:inline>
+			// new Color4Bg.AmbientLightBg({
+			// 	dom: "box",
+			// 	colors: ["#ff0f28", "#ff15c5", "#ff3aff", "#f5070e", "#fe1010", "#f756f7"],
+			// 	loop: true,
+			// });
+
 			new Color4Bg.AmbientLightBg({
 				dom: "box",
-				colors: ["#ff0f28", "#ff15c5", "#ff3aff", "#f5070e", "#fe1010", "#f756f7"],
-				loop: true,
-				performance: {
-					maxFPS: 15, // Limit FPS to reduce load
-					quality: "low" // Lower quality on mobile
-				}
-			});
+				colors: ["#FDFDFD","#DDDDDD","#87f581","#aa0004","#343434","#010101"],
+				loop: true
+			})
 		</script>
 	</body>
 </html>
