@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" id="box">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -29,13 +29,21 @@ const { title } = Astro.props;
 		</slot>
 
 		<script is:inline>
-			if (window.innerWidth > 768) {
-				new Color4Bg.AmbientLightBg({
-					dom: "box",
-					colors: ["#ff0f28", "#ff15c5", "#ff3aff", "#f5070e", "#fe1010", "#f756f7"],
-					loop: true,
-				});
+			function initAmbientLightBg() {
+				if (window.innerWidth > 768) {
+					new Color4Bg.AmbientLightBg({
+						dom: "box",
+						colors: ["#ff0f28", "#ff15c5", "#ff3aff", "#f5070e", "#fe1010", "#f756f7"],
+						loop: true,
+					});
+				}
 			}
+
+			initAmbientLightBg();
+
+			window.addEventListener('resize', function() {
+				initAmbientLightBg();
+			});
 		</script>
 	</body>
 </html>

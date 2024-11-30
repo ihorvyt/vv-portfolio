@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Volodymyr Vorobiov - UX/UI Designer">
-    <main class="content">
+    <main class="content" id="box">
         <section class="about-me">
             <h1>Volodymyr Vorobiov <br> <span>UX/UI Designer</span></h1>
 
@@ -13,7 +13,7 @@ import Layout from '../layouts/Layout.astro';
 
             <div class="soc-medias">
                 <a href="https://www.linkedin.com/in/volodymyr-vorobiov-b35938279/">LinkedIn</a>
-                <a href="https://www.behance.net/vorobiovolodym">Behance</a>
+                <a href="https://www.behance.net/vorobvolod">Behance</a>
             </div>
         </section>
 
@@ -47,11 +47,12 @@ import Layout from '../layouts/Layout.astro';
         justify-content: space-between;
         z-index: 1;
         padding: 3.47vw;
-        height: 100%;
+        min-height: 100vh;
         box-sizing: border-box;
     }
 
     .about-me {
+        z-index: 1;
         h1 {
             color: #FFF;
             font-family: Unbounded, sans-serif;
@@ -102,6 +103,8 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .cases {
+        padding-top: 5%;
+        z-index: 1;
         h2 {
             color: #FFF;
             font-family: Unbounded, sans-serif;
@@ -110,10 +113,10 @@ import Layout from '../layouts/Layout.astro';
             font-weight: 400;
             line-height: normal;
             mix-blend-mode: difference;
+            padding-bottom: 2.5%;
         }
 
         ul {
-            padding-top: 4.38vw;
             display: flex;
             justify-content: space-between;
 
