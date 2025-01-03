@@ -2,6 +2,5 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-    site: 'https://ihorvyt.github.io',
-    base: '/vv-portfolio',
+    site: 'https://vvdesign.site',
 });

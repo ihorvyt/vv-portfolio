@@ -16,7 +16,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<!-- Include AmbientLightBg.min.js -->
 		<title>{title}</title>
-		<script is:inline src="/vv-portfolio/AmbientLightBg.min.js"></script>
+		<script is:inline src="/AmbientLightBg.min.js"></script>
 
 		<!-- Unbounded  Geologica-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,10 +40,6 @@ const { title } = Astro.props;
 			}
 
 			initAmbientLightBg();
-
-			window.addEventListener('resize', function() {
-				initAmbientLightBg();
-			});
 		</script>
 	</body>
 </html>
