@@ -5,11 +5,13 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Volodymyr Vorobiov - UX/UI Designer">
     <main class="content" id="box">
         <section class="about-me">
-            <h1>Volodymyr Vorobiov <br> <span>UX/UI Designer</span></h1>
+            <h1>Volodymyr Vorobiov <br/> <span>UX/UI Designer</span></h1>
 
-            <p>Your website is the first handshake with your audience, and I design it to leave a lasting impression. <br> With 2 years of experience as a  <br> Web Designer, I specialize in blending art and technology to craft unforgettable digital journeys. <br><br>
-                On the creative side, I bring expertise in tools like Blender, Photoshop, Figma, and Illustrator to design custom graphics, intuitive UI/UX elements, and full website layouts. <br><br>
-                My passion lies in creating visually stunning designs that enhance user experiences. I’m also skilled in prototyping, wireframing, and UI design, ensuring that every user’s journey is seamless across all platforms.</p>
+            <div>
+                <p>Your website is the first handshake with your audience, and I design it to leave a lasting impression. <br/> With <span class="experience-years"></span> years of experience as a Web Designer, I specialize in blending art and technology to craft unforgettable digital journeys. </p>
+                <p>On the creative side, I bring expertise in tools like Blender, Photoshop, Figma, and Illustrator to design custom graphics, intuitive UI/UX elements, and full website layouts. </p>
+                <p>My passion lies in creating visually stunning designs that enhance user experiences. I’m also skilled in prototyping, wireframing, and UI design, ensuring that every user’s journey is seamless across all platforms.</p>
+            </div>
 
             <div class="soc-medias">
                 <a href="https://www.linkedin.com/in/volodymyr-vorobiov-b35938279/">LinkedIn</a>
@@ -21,11 +23,11 @@ import Layout from '../layouts/Layout.astro';
             <h2>Cases</h2>
 
             <ul>
-                <li><a href="https://www.figma.com/design/CxaVkQHYv0bywQZqpg0Lbu/frant?node-id=0-1&t=MRPwvwIJnZnKW15c-1">Frant</a></li>
-                <li><a href="https://www.figma.com/design/EfgFZTnoepS0tpQz2FcP0O/buskanini?node-id=0-1&t=20reYqtlvjwCZyNq-1">buskanini</a></li>
-                <li><a href="https://www.figma.com/design/annOtk3I5nMx2sYFFDvecL/SkiWay?node-id=0-1&t=ibe6i9gLCbbCb737-1">SkiWay</a></li>
-                <li><a href="https://www.figma.com/design/8bUas6iucAjs7EIW2R7B5v/Tedo-Artline?node-id=0-1&t=VbmIZTIP5y1lnj1P-1">Tedo Artline</a></li>
-                <li><a href="https://www.figma.com/design/yZ2WvTwOyeaGRsyvU6KoS6/LeafBox?node-id=0-1&t=mrjmoXLIgh3yw5xp-1">LeafBox</a></li>
+                <li><a href="https://frant.digital" target="_blank">Frant</a></li>
+                <li><a href="https://buskanini-fe.vercel.app/en" target="_blank">Buskanini</a></li>
+                <li><a href="https://www.behance.net/gallery/216531895/SkiWay-E-commerce-shop" target="_blank">SkiWay</a></li>
+                <li><a href="https://yeanecdoty.com" target="_blank">yeAnecdoty</a></li>
+                <li><a href="https://www.behance.net/gallery/216330659/Web-design-for-Nutrition-Leaft-Food-desivery" target="_blank">LeafBox</a></li>
             </ul>
         </section>
 
@@ -35,6 +37,7 @@ import Layout from '../layouts/Layout.astro';
         </video>
     </main>
 </Layout>
+
 <style>
     video {
         display: none;
@@ -73,10 +76,6 @@ import Layout from '../layouts/Layout.astro';
             line-height: 1.74vw;
             max-width: 58.13vw;
             padding-top: 2.36vw;
-
-            br:first-child, br:nth-child(2) {
-                display: none;
-            }
         }
 
         .soc-medias {
@@ -224,3 +223,21 @@ import Layout from '../layouts/Layout.astro';
         }
     }
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const startYear = 2023;
+        const startMonth = 6;
+        const currentDate = new Date();
+        const startDate = new Date(startYear, startMonth - 1); // JS рахує місяці з 0
+
+        const diffInMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + (currentDate.getMonth() - startDate.getMonth());
+        const experienceYears = Math.floor(diffInMonths / 12);
+        const experienceFraction = (diffInMonths % 12) >= 6 ? 0.5 : 0;
+        const totalExperience = experienceYears + experienceFraction;
+
+        document.querySelectorAll(".experience-years").forEach(el => {
+            el.textContent = totalExperience.toString();
+        });
+    });
+</script>
